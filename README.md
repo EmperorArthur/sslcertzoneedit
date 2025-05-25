@@ -50,6 +50,14 @@ acme.sh --set-default-ca letsencrypt --issue --dns dns_zoneedit -d example.com -
 Supported CA's can be found here: [supported CA's ](https://github.com/acmesh-official/acme.sh#supported-ca)
 
 
+## OPNsense installation
+Clone the repository to the machine, then run the install script.
+```sh
+cd /usr/src/
+git clone https://github.com/blueslow/sslcertzoneedit.git
+. /usr/src/sslcertzoneedit/apply.sh
+```
+
 ## Pfsense installation
 Install the acme package. Place the dns_zoneedit.sh file into the /usr/local/pkg/acme/dnsapi/ folder.
 Then place the acme_zoneedit_inc.patch into the /usr/local/pkg/acme/ folder.
@@ -107,6 +115,7 @@ In pfsense when acme pakage is updated acme.inc is overwritten, thus it has to b
   - 23-10-10
 * acme.inc have changed format, consequently patch et.c. are updated
   - 24-05-31.
+* Added Support for OPNsense
 
 ## Aknowledgements
 * Thanks to onley for dns_zoneedit_rm
